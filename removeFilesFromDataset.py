@@ -13,7 +13,7 @@ def delete_file_safe(path):
         os.remove(path)
         print(f"Deleted {path}")
     else:
-        print(f"Could nott find {path}")
+        print(f"Could not find {path}")
 
 
 def remove_from_dataset(img_ids):
