@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Fire Monitoring Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <header>
+        <h1>AI Fire Monitoring</h1>
+      </header>
+      
+      <main>
+        <section class="controls">
+            <h2>Settings</h2>
+            <label for="confidence">Confidence: <span id="confValue">0.5</span></label>
+            <input type="range" id="confidence" min="0" max="1" step="0.01" value="0.5"/>
+
+            <label for="imageInput">Choose Image</label>
+            <input type="file" id="imageInput" accept="image/*" />
+
+            <label for="modelSelect">Choose model:</label>
+            <select id="modelSelect"></select><br><br>
+
+
+            <button id="detectBtn">Run Detection</button>
+        </section>
+
+        <section class="viewer">
+          <div class="image-block">
+            <h3>Input Image</h3>
+            <img id="inputPreview" src="" alt="Input Preview" />
+          </div>
+          <div class="image-block">
+            <h3>Detection Output</h3>
+            <img id="outputPreview" src="" alt="Output Preview" />
+            <a id="saveBtn" download="output.png">Save Output</a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
