@@ -16,7 +16,7 @@ Progress list
 - [x] Added livestream support
 - [x] Added video support
 - [x] Trained v2 of the model
-- [ ] Added web ui dashboard to use model from
+- [x] Added web ui dashboard to use model from
 
 ## Usage:
 
