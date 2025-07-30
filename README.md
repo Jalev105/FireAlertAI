@@ -30,8 +30,8 @@ Progress list
 - Download dataset with: 
 ```
 #!/bin/bash
-curl -L -o fire-and-smoke-dataset-object-detection-yolo.zip\
-https://www.kaggle.com/api/v1/datasets/download/azimjaan21/fire-and-smoke-dataset-object-detection-yolo
+curl -L -o ~/Downloads/fire-and-smoke-dataset-object-detection-yolo.zip\
+  https://www.kaggle.com/api/v1/datasets/download/azimjaan21/fire-and-smoke-dataset-object-detection-yolo
 ```
 - Unzip folder with `unzip fire-and-smoke-dataset-object-detection-yolo.zip`
 - (Optional) Remove zipped file with `sudo rm -f fire-and-smoke-dataset-object-detection-yolo.zip`
