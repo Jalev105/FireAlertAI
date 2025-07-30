@@ -1,6 +1,6 @@
 # **FireAlert AI README**
 
-FireAlert AI is a program that can detect smoke and fire using an AI object detection program. This
+FireAlert AI is a program that can detect smoke and fire using an AI object detection model. It contains documentation on how to run the pretrained models that come with the repository and how to train FireAlertAI models yourself on NVIDIA Jetson Orin Nano devices. This kind of system can provide early alerts about wildfires, potentially helping to reduce fire danger in remote locations 
 
 (Jetson inference must be installed for this project to work)
 
@@ -30,15 +30,15 @@ Progress list
 - Download dataset with: 
 ```
 #!/bin/bash
-curl -L -o ~/Downloads/fire-and-smoke-dataset-object-detection-yolo.zip\
+curl -L -o fire-and-smoke-dataset-object-detection-yolo.zip\
   https://www.kaggle.com/api/v1/datasets/download/azimjaan21/fire-and-smoke-dataset-object-detection-yolo
 ```
 - Unzip folder with `unzip fire-and-smoke-dataset-object-detection-yolo.zip`
 - (Optional) Remove zipped file with `sudo rm -f fire-and-smoke-dataset-object-detection-yolo.zip`
-- cd to FireAlertAI directory and run `sudo python3 yoloToVOC.py` (change paths if needed)
-- At the moment, some files in the dataset cause errors when training, run `sudo python3 removesFilesFromDataset.py` in order to remove them
+- cd to FireAlertAI directory and run `python3 yoloToVOC.py` (change paths if needed)
+- ~~At the moment, some files in the dataset cause errors when training, run `python3 removeFilesFromDataset.py` in order to remove them~~
 - cd into data directory with `cd ~/jetson-inference/python/training/detection/ssd/data/`
-- (Optional) Remove YOLO dataset with `sudo rm -rf fire-and-smoke-dataset-object-detection-yolo`
+- (Optional) Remove YOLO dataset with `sudo rm -rf fire_smoke`
 - `cd ..` up into the ssd folder
 - Start training with: 
 ```
@@ -83,7 +83,7 @@ options:
 
 ### Web UI Dashboard
 
-This version of FireAlertAI includes a custom web UI dashboard for making inferences on images. Models are selected via the dropdown in the menu, to use your own model move it to the models folder in FireAlertAI.
+This version of FireAlertAI includes a custom web UI dashboard for making inferences on images. Models are selected via the dropdown in the menu, to use your own model move it (FA.onnx) to the models folder in FireAlertAI.
 
 To run the dashboard:
 - Start the backend by moving into the FireAlertAI/web folder and running `python3 FireAlertServer.py`
