@@ -12,7 +12,7 @@ custom_labels = ["fire", "smoke"]
 REMOVE_EMPTY_ANNOTATIONS = True
 
 #paths
-yolo_dir_path = os.path.expanduser("~/jetson-inference/python/training/detection/ssd/data/fire-and-smoke-dataset-object-detection-yolo/")
+yolo_dir_path = os.path.expanduser("~/jetson-inference/python/training/detection/ssd/data/fire_smoke/")
 voc_dir_path  = os.path.expanduser("~/jetson-inference/python/training/detection/ssd/data/fire_smoke_voc/")
 
 #create VOC folders
