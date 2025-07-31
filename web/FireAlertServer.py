@@ -65,10 +65,10 @@ def detect_fire():
             left, top, right, bottom = int(detection.Left), int(detection.Top), int(detection.Right), int(detection.Bottom)
             label = net.GetClassDesc(detection.ClassID)
             confidence = detection.Confidence
-            cv2.rectangle(img_cv2, (left, top), (right, bottom), (255, 255, 0), 4)
+            cv2.rectangle(img_cv2, (left, top), (right, bottom), (255, 0, 255), 4)
             cv2.putText(img_cv2, f"{label}: {confidence:.2f}",
                         (left + 20, top + 40),
-                        cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), 2)
+                        cv2.FONT_HERSHEY_SIMPLEX, 1, (198, 249, 1), 2)
 
         name, ext = os.path.splitext(filename)
         model_suffix = os.path.splitext(model_name)[0]

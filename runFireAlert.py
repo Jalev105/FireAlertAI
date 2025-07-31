@@ -52,11 +52,11 @@ if(opt.livestream):
             conf = detection.Confidence
 
             #draw rectangle box
-            cv2.rectangle(img_cv2, (left, top), (right, bottom), (255, 255, 0), 2)
+            cv2.rectangle(img_cv2, (left, top), (right, bottom), (255, 0, 255), 2)
 
             #add label text
             label = f"{class_desc}: {conf:.2f}"
-            cv2.putText(img_cv2, label, (left + 5, top + 25), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255, 0, 255), 2)
+            cv2.putText(img_cv2, label, (left + 5, top + 25), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (198, 249, 1), 2)
 
         #convert image back
         img_output = jetson_utils.cudaFromNumpy(img_cv2)
@@ -97,14 +97,14 @@ else:
         for i in range(len(box0)):
             box = box0[i]
             #cv2.rectangle(imgOld, (box[0], box[1]), (box[2], box[3]), (255, 255, 0), 4)
-            cv2.rectangle(imgOld, (int(box[0]), int(box[1])), (int(box[2]), int(box[3])), (255, 255, 0), 4)
+            cv2.rectangle(imgOld, (int(box[0]), int(box[1])), (int(box[2]), int(box[3])), (255, 0, 255), 4)
             #label = f"""{labels[i]}: {probs[i]:.2f}"""
             label = f"{label0[i]}: {prob0[i]:.2f}"
             cv2.putText(imgOld, label,
                         (int(box[0]) + 20, int(box[1]) + 40),
                         cv2.FONT_HERSHEY_SIMPLEX,
                         1,  # font scale
-                        (255, 0, 255),
+                        (198, 249, 1),
                         2)  # line type
         if(opt.output != "" or opt.test):
             cv2.imwrite(os.path.expanduser(filePathOut), imgOld)
@@ -138,11 +138,11 @@ else:
                 conf = detection.Confidence
 
                 #draw bounding box
-                cv2.rectangle(img_cv2, (left, top), (right, bottom), (255, 255, 0), 2)
+                cv2.rectangle(img_cv2, (left, top), (right, bottom), (255, 0, 255), 2)
 
                 #add label
                 label = f"{class_desc}: {conf:.2f}"
-                cv2.putText(img_cv2, label, (left + 5, top + 25), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255, 0, 255), 2)
+                cv2.putText(img_cv2, label, (left + 5, top + 25), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (198, 249, 1), 2)
 
             #convert image back
             img_output = jetson_utils.cudaFromNumpy(img_cv2)
