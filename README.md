@@ -20,6 +20,21 @@ Progress list
 - [x] Trained v2 of the model
 - [x] Added web ui dashboard to use model from
 
+## Demos:
+
+| Before | After |
+| ------ | ------ |
+| ![01activities](https://github.com/user-attachments/assets/85dcf169-3764-45ac-ab2a-d61b60918eba) | ![01activities_FA2](https://github.com/user-attachments/assets/ad804dee-7982-47f1-be08-22b0cc94170d) |
+| ![imFire](https://github.com/user-attachments/assets/f279126b-fa17-4080-a3e6-12015fdc5bfc) | ![imFire_FA2](https://github.com/user-attachments/assets/e1313baa-08a9-45f4-98f6-a7d865d3f805) |
+| ![3000](https://github.com/user-attachments/assets/139a44df-0dd1-43e0-939f-f071a0becc23) | ![3000_FA2](https://github.com/user-attachments/assets/b5867b28-655d-4f61-bc72-dada0d5a275f) |
+
+
+
+
+
+
+
+
 ## Usage:
 
 ### Download General Data:
