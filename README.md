@@ -1,5 +1,7 @@
 # **FireAlert AI README**
 
+[View Video Demo](https://www.youtube.com/watch?v=D0USiicJHjY)
+
 FireAlert AI is a program that can detect smoke and fire using an AI object detection model. It contains documentation on how to run the pretrained models that come with the repository and how to train FireAlertAI models yourself on NVIDIA Jetson Orin Nano devices. This kind of system can provide early alerts about wildfires, potentially helping to reduce fire danger in remote locations 
 
 (Jetson inference must be installed for this project to work)
